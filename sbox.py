@@ -14,7 +14,7 @@ POP_SIZE = 10
 GENS = 25
 SBOX_SIZE = 256
 TOTAL_SBOXES = 100   # <<< REQUIRED
-OUT_FILE = "SBOX_1000_AvgNL.txt"
+OUT_FILE = "S-Box/SBOX_100_AvgNL.txt"
 
 # =====================================
 # Chaotic Map
@@ -164,7 +164,7 @@ def detect_completed(path):
     return count
 
 # =====================================
-# MAIN: Generate 1000 S-boxes
+# MAIN: Generate 100 S-boxes
 # =====================================
 completed = detect_completed(OUT_FILE)
 start_idx = completed + 1
@@ -184,4 +184,4 @@ with open(OUT_FILE, mode) as f:
         f.write(np.array2string(sbox.reshape(16, 16)))
         f.write("\n")
 
-print("\n✅ DONE: 100 S-boxes saved to 'SBOX_100_AvgNL.txt'")
+print("\n✅ DONE: 100 S-boxes saved to 'S-Box/SBOX_100_AvgNL.txt'")
