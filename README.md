@@ -88,3 +88,28 @@ Run the S-box generation and hybrid optimization procedure using:
 Run the high-nonlinearity S-box search using:
 
 `python3 105NL.py`
+
+## Methodology
+
+The computational workflow implemented in this repository is:
+
+1. Generate initial 8-bit S-box candidates using the HSCMM chaotic map.
+2. Evaluate candidate S-boxes using Walsh-Hadamard-transform-based nonlinearity.
+3. Improve candidate S-boxes using Genetic Algorithm and Hill Climbing optimization.
+4. Apply affine transformation/optimization to further refine the S-boxes.
+5. Evaluate the final S-boxes using NL, BIC-NL, SAC, BIC-SAC, LAP bias, and DAP.
+6. Store the resulting S-boxes and summary metrics in the supplementary data files.
+
+## Citation
+
+If you use this code or data, please cite the associated manuscript:
+
+*A Secure S-Box Construction Approach Using Hybrid Sinusoidal Cubic Modular Map and Hybrid Optimization Techniques*.
+
+Full bibliographic details will be added after publication.
+
+## License and Contribution Guidelines
+
+The software in this repository is released under the MIT License. See `LICENSE` for details.
+
+Contributions that improve reproducibility, documentation, or the implementation are welcome. Please open an issue or submit a pull request describing the proposed change.
